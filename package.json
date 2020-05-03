@@ -1,7 +1,7 @@
 {
-    "name": "grocerylist",
+    "name": "node_mongo_jwt",
     "version": "1.0.0",
-    "description": "Manage grocery list",
+    "description": "JWT authentication using Node and Mongodb",
     "main": "index.js",
     "author": "Bharat Gidwani",
     "license": "MIT",
