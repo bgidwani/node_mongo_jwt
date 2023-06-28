@@ -4,25 +4,26 @@
     "description": "JWT authentication using Node and Mongodb",
     "main": "index.js",
     "author": "Bharat Gidwani",
-    "license": "MIT",
+    "license": "ISC",
     "scripts": {
         "start": "nodemon index.js",
-        "format": "pretty-quick "
+        "format": "pretty-quick ",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@hapi/joi": "^17.1.1",
         "bcryptjs": "^2.4.3",
-        "body-parser": "^1.19.0",
-        "dotenv": "^8.2.0",
-        "express": "^4.17.1",
-        "jsonwebtoken": "^8.5.1",
-        "mongoose": "^5.9.11"
+        "body-parser": "^1.20.2",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.0",
+        "mongoose": "^7.3.1"
     },
     "devDependencies": {
-        "husky": "^4.2.5",
-        "nodemon": "^2.0.3",
-        "prettier": "^2.0.5",
-        "pretty-quick": "^2.0.1"
+        "husky": "^8.0.3",
+        "nodemon": "^2.0.22",
+        "prettier": "^2.8.8",
+        "pretty-quick": "^3.1.3"
     },
     "husky": {
         "hooks": {
