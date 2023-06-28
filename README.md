@@ -16,11 +16,11 @@ docker-compose up -d
 
 Docker will pull MongoDB and Node.js image, if needed
 
-Navigate to `http://localhost:6868` to verify the site is functional
+Navigate to `http://localhost:8080` to verify the site is functional
 
 ## Register new User
 
-Send POST request to `http://localhost:8080/v1/register` route with appropriate body (sample below)
+Send POST request to `http://localhost:8080/v1/account/register` route with appropriate body (sample below)
 
 ```
 {
@@ -32,7 +32,7 @@ Send POST request to `http://localhost:8080/v1/register` route with appropriate 
 
 ## Login
 
-Send POST request to `http://localhost:8080/v1/login` route with appropriate body (sample below)
+Send POST request to `http://localhost:8080/v1/account/login` route with appropriate body (sample below)
 
 ```
 {
