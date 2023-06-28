@@ -10,4 +10,4 @@ RUN npm pkg delete scripts.prepare && npm i --omit=dev
 # Copy the source code
 COPY . .
 
-CMD ["node", "index.js"]
+CMD ["node", "src/index.js"]

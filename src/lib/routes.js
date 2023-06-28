@@ -3,28 +3,30 @@
 const express = require('express');
 
 //import routes
-const authRoute = require('../app/auth/routes');
-const userRoute = require('../app/users/routes');
+const authRoute = require('../auth/routes');
+const userRoute = require('../users/routes');
 
-const acl = require('../app/middleware/acl');
+const acl = require('../lib/middleware/acl');
 
-const app = (module.exports = express.Router());
+const router = express.Router();
 
 // Signup route
-app.use('/v1', authRoute);
+router.use('/v1', authRoute);
 
-app.use('/v1/users', acl.token.validate, userRoute);
+router.use('/v1/users', acl.token.validate, userRoute);
 
 //Routes for home page
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.send('Welcome to NodeJS');
 });
 
 // catch 404 and forward to error handler
 // note this is after all good routes and is not an error handler
 // to get a 404, it has to fall through to this route - no error involved
-app.use(function (req, res, next) {
+router.use(function (req, res, next) {
     var err = new Error('You seems to be lost');
     err.status = 404;
     next(err);
 });
+
+module.exports = router;

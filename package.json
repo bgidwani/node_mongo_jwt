@@ -6,7 +6,7 @@
     "author": "Bharat Gidwani",
     "license": "ISC",
     "scripts": {
-        "start": "nodemon index.js",
+        "start": "nodemon src/index.js",
         "format": "pretty-quick ",
         "prepare": "husky install"
     },

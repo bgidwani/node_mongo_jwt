@@ -1,13 +1,9 @@
 'use strict';
 
-const express = require('express');
 const bodyParser = require('body-parser');
 const routes = require('./routes');
 
-const init = () => {
-    //initialize the server
-    const app = express();
-
+const init = (app) => {
     // create application/json parser
     var jsonParser = bodyParser.json();
 
@@ -20,7 +16,7 @@ const init = () => {
     const port = process.env.SERVER_PORT || 8080;
 
     // routes
-    app.use('/', routes);
+    routes.configure(app);
 
     // listen for incoming requests
     app.listen(port, () => {

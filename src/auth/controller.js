@@ -2,8 +2,8 @@
 
 const { validateSignup, validateLogin } = require('./lib/validations');
 const { encryptPassword, comparePassword } = require('./lib/password-hasher');
-const User = require('../models/User');
-const acl = require('../middleware/acl');
+const User = require('../db/models/User');
+const acl = require('../lib/middleware/acl');
 
 // Signup user
 const signup = async (req, res) => {
